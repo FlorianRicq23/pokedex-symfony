@@ -1,0 +1,22 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+	<div class="container">
+		<div class="row">
+			<div class="col-12">
+				<h1>Vous vous trouvez sur la page d'accueil</h1>
+			</div>
+			<div class="col-12">
+				<ul>
+					<li>Les pokémons se trouvent ici :
+						<a href="{{ '/pokemon' }}">pokedex</a>
+					</li>
+					<li>La génération des pokémons est la 6e (configurable en variable d'environnement)</li>
+					<li>La commande <code>php bin/console app:export-csv</code>
+						vous permettra de générer un fichier CSV contenant la liste des 
+                        pokémons avec leur poids et leur taille</li>
+				</ul>
+			</div>
+		</div>
+	</div>
+{% endblock %}
