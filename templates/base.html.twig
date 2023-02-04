@@ -1,19 +1,37 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <meta charset="UTF-8">
-        <title>{% block title %}Pokedex{% endblock %}</title>
-        <link rel="icon" href="https://upload.wikimedia.org/wikipedia/commons/thumb/5/53/Pok%C3%A9_Ball_icon.svg/1200px-Pok%C3%A9_Ball_icon.svg.png">
+	<head>
+		<meta charset="UTF-8">
+		<title>
+			{% block title %}Pokedex
+			{% endblock %}
+		</title>
+		<link rel="icon" href="https://upload.wikimedia.org/wikipedia/commons/thumb/5/53/Pok%C3%A9_Ball_icon.svg/1200px-Pok%C3%A9_Ball_icon.svg.png">
 		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-        {% block stylesheets %}
-            {{ encore_entry_link_tags('app') }}
-        {% endblock %}
+		{% block stylesheets %}
+			{{ encore_entry_link_tags('app') }}
+		{% endblock %}
 
-        {% block javascripts %}
-            {{ encore_entry_script_tags('app') }}
-        {% endblock %}
-    </head>
-    <body>
-        {% block body %}{% endblock %}
-    </body>
+		{% block javascripts %}
+			{{ encore_entry_script_tags('app') }}
+		{% endblock %}
+	</head>
+	<body>
+		{% block navbar %}
+			<nav class="navbar navbar-expand bg-danger">
+				<a class="navbar-brand text-white" href="/" aria-label="home page">POKEDEX</a>
+				<div>
+					<ul class="navbar-nav">
+						<li class="nav-item">
+							<a class="nav-link text-white" href="{{'/'}}" aria-label="home page">Home</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link text-white" href="{{'/pokemon'}}" aria-label="pokemons list page">Pokémons List</a>
+						</li>
+					</ul>
+				</div>
+			</nav>
+		{% endblock %}
+		{% block body %}{% endblock %}
+	</body>
 </html>
