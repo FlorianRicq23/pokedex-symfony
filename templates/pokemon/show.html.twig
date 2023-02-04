@@ -1,0 +1,37 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+	<div class="container">
+		<div class="row">
+			<div class="col-12 text-center">
+				<h1>{{pokemonDetails.name}}
+					#{{pokemonDetails.id}}</h1>
+			</div>
+			<div class="col-6">
+				<img class=" mx-auto d-block" style="height:200px" src="https://img.pokemondb.net/artwork/large/{{pokemonDetails.name}}.jpg" alt="image of pokemon"/>
+			</div>
+			<div class="col-6">
+				<ul>
+					<li>Height :
+						{{pokemonDetails.height}}
+						cm</li>
+					<li>Weight :
+						{{pokemonDetails.height}}
+						kg</li>
+					<li>Hp :
+						{{pokemonDetails.stats[0].base_stat}}</li>
+					<li>Attack :
+						{{pokemonDetails.stats[1].base_stat}}</li>
+					<li>Defense :
+						{{pokemonDetails.stats[2].base_stat}}</li>
+					<li>Special-attack :
+						{{pokemonDetails.stats[3].base_stat}}</li>
+					<li>Special-defense :
+						{{pokemonDetails.stats[4].base_stat}}</li>
+					<li>Speed :
+						{{pokemonDetails.stats[5].base_stat}}</li>
+				</ul>
+			</div>
+		</div>
+	</div>
+{% endblock %}
